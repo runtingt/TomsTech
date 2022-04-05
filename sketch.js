@@ -13,8 +13,8 @@ function centerCanvas() {
 function alignButtons() {
     var x = (windowWidth - reset_button.width)/2;
     var y = (windowHeight + height)/2;
-    reset_button.position(x - reset_button.width/1.5, y);
-    predict_button.position(x + reset_button.width/1.5, y)
+    reset_button.position(x - reset_button.width/1.95, y);
+    predict_button.position(x + reset_button.width/1.95, y)
 }
 
 // Setup the canvas
@@ -27,7 +27,11 @@ function setup() {
 
     // Create reset and predict buttons and align them to the canvas
     reset_button = createButton("Reset");
+    reset_button.id("controls");
+    reset_button.size(200);
     predict_button = createButton("Predict");
+    predict_button.id("controls");
+    predict_button.size(200);
     alignButtons();
 
     reset_button.mousePressed(resetCanvas);

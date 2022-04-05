@@ -18,3 +18,7 @@ h1 {
 button {
   margin-top: 15;
 }
+
+#controls {
+  font-size: x-large;
+}
