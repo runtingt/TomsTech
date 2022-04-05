@@ -17,10 +17,32 @@ function alignButtons() {
     predict_button.position(x + reset_button.width/1.95 + 1, y)
 }
 
+// Stop scrolling on mobile devices when touching
+function stopTouchScrolling(canvas){
+    // Prevent scrolling when touching the canvas
+    document.body.addEventListener("touchstart", function (e) {
+        if (e.target == canvas) {
+            e.preventDefault();
+        }
+    }, { passive: false });
+    document.body.addEventListener("touchend", function (e) {
+        if (e.target == canvas) {
+            e.preventDefault();
+        }
+    }, { passive: false });
+    document.body.addEventListener("touchmove", function (e) {
+        if (e.target == canvas) {
+            e.preventDefault();
+        }
+    }, { passive: false });
+    
+}
+
 // Setup the canvas
 function setup() {
     // Create a 400px by 400px blank canvas and center align it
-    canvas = createCanvas(400, 400);
+    canvas = createCanvas(400, 400).parent("canvasParent").id("drawingCanvas");
+    stopTouchScrolling(document.getElementById('drawingCanvas'));
     centerCanvas();
     background(255, 255, 255);
     frameRate(60);
@@ -29,7 +51,7 @@ function setup() {
     reset_button = createButton("Reset");
     reset_button.id("controls");
     reset_button.size(200);
-    predict_button = createButton("Predict");
+    predict_button = createButton("Save");
     predict_button.id("controls");
     predict_button.size(200);
     alignButtons();
