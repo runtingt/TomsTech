@@ -13,8 +13,8 @@ function centerCanvas() {
 function alignButtons() {
     var x = (windowWidth - reset_button.width)/2;
     var y = (windowHeight + height)/2;
-    reset_button.position(x - reset_button.width/1.95, y);
-    predict_button.position(x + reset_button.width/1.95, y)
+    reset_button.position(x - reset_button.width/1.95 + 2, y);
+    predict_button.position(x + reset_button.width/1.95 + 1, y)
 }
 
 // Setup the canvas
