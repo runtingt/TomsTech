@@ -41,7 +41,7 @@ function stopTouchScrolling(canvas){
 // Setup the canvas
 function setup() {
     // Create a 400px by 400px blank canvas and center align it
-    canvas = createCanvas(400, 400).parent("canvasParent").id("drawingCanvas");
+    canvas = createCanvas(400, 400).id("drawingCanvas");
     stopTouchScrolling(document.getElementById('drawingCanvas'));
     centerCanvas();
     background(255, 255, 255);
