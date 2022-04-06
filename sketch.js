@@ -71,7 +71,9 @@ function resetCanvas() {
 
 // Save the image so we can predict information about it later
 function saveImage() {
-
+    // First, convert to a base64 string and print it to the console
+    let imageBase64String = canvas.elt.toDataURL();
+    console.log(imageBase64String);
 }
 
 // Draw black circles if the mouse is pressed
