@@ -74,11 +74,14 @@ function saveImage() {
     // First, convert to a base64 string and print it to the console
     let imageBase64String = canvas.elt.toDataURL();
     console.log(imageBase64String);
+
+    // Test a GET request
+    fetch("129.151.91.21:5000/?Base64String=test")
 }
 
 // Draw black circles if the mouse is pressed
 function draw() {
-    strokeWeight(100);
+    strokeWeight(40);
     if(mouseIsPressed) {
         fill(0);
         line(mouseX, mouseY, pmouseX, pmouseY);
