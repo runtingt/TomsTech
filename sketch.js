@@ -78,7 +78,7 @@ function saveImage() {
 
 // Draw black circles if the mouse is pressed
 function draw() {
-    strokeWeight(20);
+    strokeWeight(40);
     if(mouseIsPressed) {
         fill(0);
         line(mouseX, mouseY, pmouseX, pmouseY);
