@@ -8,11 +8,18 @@ canvas {
   border: 2px solid rgb(83, 83, 83);
 }
 
-h1 {
+h1, h2 {
   font-family: Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
+}
+
+h1 {
   font-size: 48px;
   font-weight: normal;
+}
+
+div {
+  clear: both;
 }
 
 button {
