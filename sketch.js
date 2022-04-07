@@ -78,7 +78,7 @@ async function getPrediction(dataURL) {
     console.log(text);
 
     // Display on the screen
-    document.getElementById("prediction").innerHTML = "I think this is a".concat(String(text))
+    document.getElementById("prediction").innerHTML = "I think this is a: ".concat(String(text))
 }
 
 
