@@ -18,6 +18,12 @@ h1 {
   font-weight: normal;
 }
 
+h2 {
+  padding-top: auto;
+  padding-left: 2px;
+  margin-bottom: 10px;
+}
+
 div {
   clear: both;
 }
